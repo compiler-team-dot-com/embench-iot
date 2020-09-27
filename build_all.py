@@ -483,12 +483,11 @@ def compile_file(f_root, srcdir, bindir, suffix='.c'):
             )
             succeeded = False
 
-    if not succeeded:
-        log.debug('Command was:')
-        log.debug(arglist_to_str(arglist))
-        if res:
-            log.debug(res.stdout.decode('utf-8'))
-            log.debug(res.stderr.decode('utf-8'))
+    log.debug('Command was:')
+    log.debug(arglist_to_str(arglist))
+    if res:
+        log.debug(res.stdout.decode('utf-8'))
+        log.debug(res.stderr.decode('utf-8'))
 
     return succeeded
 
@@ -678,12 +677,11 @@ def link_benchmark(bench):
         log.warning(f'Warning: link of benchmark "{bench}" timed out')
         succeeded = False
 
-    if not succeeded:
-        log.debug('In directory "' + abs_bd_b + '"')
-        log.debug('Command was:')
-        log.debug(arglist_to_str(arglist))
-        log.debug(res.stdout.decode('utf-8'))
-        log.debug(res.stderr.decode('utf-8'))
+    log.debug('In directory "' + abs_bd_b + '"')
+    log.debug('Command was:')
+    log.debug(arglist_to_str(arglist))
+    log.debug(res.stdout.decode('utf-8'))
+    log.debug(res.stderr.decode('utf-8'))
 
     return succeeded
 
