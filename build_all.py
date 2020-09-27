@@ -627,9 +627,9 @@ def create_link_arglist(bench, binlist):
     """Create the argument list for linking benchmark, "bench", from the binaries
        in "binlist"."""
     arglist = [gp['ld']]
-    arglist.extend(gp['ldflags'])
     arglist.extend(gp['ld_output_pattern'].format(bench).split(sep=' '))
     arglist.extend(binlist)
+    arglist.extend(gp['ldflags'])
     arglist.extend(gp['user_libs'])
 
     return arglist
