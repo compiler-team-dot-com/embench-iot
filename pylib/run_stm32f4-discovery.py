@@ -62,7 +62,7 @@ def build_benchmark_cmd(bench, args):
     gdb_comms = [
         'set confirm off',
         'file {0}',
-        'target extended-remote :4242',
+        'target extended-remote :3333',
         'load',
         'delete breakpoints',
         'break start_trigger',
