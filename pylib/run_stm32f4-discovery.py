@@ -108,5 +108,5 @@ def decode_results(stdout_str, stderr_str):
         return 0.0
 
     # Time from cycles to milliseconds
-    global cpu_mhz
+    cpu_mhz = 16
     return (int(endtime.group(1)) - int(starttime.group(1))) / cpu_mhz / 1000.0
