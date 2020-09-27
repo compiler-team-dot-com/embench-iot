@@ -149,6 +149,7 @@ def benchmark_speed(bench, target_args):
     appexe = os.path.join(appdir, bench)
 
     if os.path.isfile(appexe):
+        # print(appexe)
         arglist = build_benchmark_cmd(bench, target_args)
         try:
             res = subprocess.run(

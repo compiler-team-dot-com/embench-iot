@@ -80,10 +80,15 @@ def build_benchmark_cmd(bench, args):
     for arg in gdb_comms:
         cmd.extend(['-ex', arg.format(bench)])
 
+    # print(" ".join(cmd))
     return cmd
 
 
 def decode_results(stdout_str, stderr_str):
+    # print("stdout_str")
+    # print(stdout_str)
+    # print("stderr_str")
+    # print(stderr_str)
     """Extract the results from the output string of the run. Return the
        elapsed time in milliseconds or zero if the run failed."""
     # Return code is in standard output. We look for the string that means we
