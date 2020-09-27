@@ -6,3 +6,6 @@
    Embedded Benchmark Suite.
 
    SPDX-License-Identifier: GPL-3.0-or-later */
+
+#define CPU_MHZ 16
+#define WARMUP_HEAT 5000
